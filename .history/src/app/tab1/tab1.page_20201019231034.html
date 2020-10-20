@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Todo App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-item>
+        <ion-input 
+          type="text"
+          (input) = onAddingTodo2($event)
+          placeholder="entrez ici le texte"
+        >
+        </ion-input>
+      </ion-item> 
+      <ion-button
+      (click)= onSavingToDo2();>
+        Ajouter
+      </ion-button>
+  
+
+      <ion-list>
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label>Ici la todo</ion-label>
+          </ion-item>
+
+          <ion-item-options side="end">
+            <ion-item-option color="danger" 
+            (click)=onDeleteItem2(item)>
+            Effacer
+          </ion-item-option>
+
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+
+
+    <!-- <ion-list>
+      <ion-item-sliding *ngFor="let item of todoList">
+        <ion-item>
+          <ion-label>{{item.titre}}</ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)=onDeleteItem(item)>Effacer</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list> -->
+    
+
+
+
+
+</ion-content>

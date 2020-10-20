@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
-// Déclarer une classe comme structure de base
+// Déclarer une classe comme structure de base pour objet et objetDetail
 class Todo{
   titre : string;
   description? : string
 }
+
 
 @Component({
   selector: 'app-tab1',
@@ -26,29 +27,28 @@ export class Tab1Page {
 
 
   onAddingTodo(event): void{
+    console.log(event)
     console.log(event.target.value);
     // Enregistrer event.target.value dans une variable
-    // this.todo = event.target.value; 
-    // console.log(this.todo, 'todo');
+    //this.todo = event.target.value; 
+    //console.log(this.todo, 'todo');
+    // Affiche en tant réél
     this.todo.titre = event.target.value; 
     console.log(this.todo.titre, 'this.todo.titre')
   }
 
   onSavingToDo(){
-    // Nouvelle objet vide avec la classe Todo
+    //console.log('add', this.todo.titre); 
+    // Nouvelle variable avec la classe Todo
     let todoAdd = new Todo();
-    // Vérification du contenu
-    console.log(todoAdd, "todo add")
-    // Affectation de la valeur dans le nouvel objet
+    //console.log(todoAdd, "todo add")
     todoAdd.titre = this.todo.titre;
-    // Enregistrement de l'objet dans le tableau
     this.todoList.push(todoAdd);
-    // Vérification
     console.log(this.todoList);
   }
 
   onDeleteItem(item){
-    console.log(item, 'from ondeleteitem')
+    console.log(item, 'from ondelteitem')
     // Remove item from todoList;
     // Retrouver l'index de l'élément
     const index = this.todoList.indexOf(item);

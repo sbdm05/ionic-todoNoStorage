@@ -7,6 +7,13 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
+// Déclaration de la classe toDo
+export class Todo{
+  titre : string;
+  contenu : string; 
+  status: string
+}
+
 
 @NgModule({
   imports: [
@@ -20,3 +27,4 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
 })
 
 export class Tab1PageModule {}
+

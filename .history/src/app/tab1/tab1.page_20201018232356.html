@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Liste toDo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+<ion-item>
+  <!-- <ion-input
+  type="text"
+  placeholder="entrez ici la tâche">
+</ion-input> -->
+
+<ion-input 
+type="text"
+(input) = onAddingTodo($event)
+placeholder="entrez ici le texte"
+>
+</ion-input>
+</ion-item>
+<ion-button
+
+>
+  Ajouter
+</ion-button>
+  </ion-header>
+
+
+</ion-content>

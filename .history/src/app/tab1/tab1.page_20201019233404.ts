@@ -48,7 +48,7 @@ export class Tab1Page {
   }
 
   onDeleteItem(item){
-    console.log(item, 'from ondeleteitem')
+    console.log(item, 'from ondelteitem')
     // Remove item from todoList;
     // Retrouver l'index de l'élément
     const index = this.todoList.indexOf(item);

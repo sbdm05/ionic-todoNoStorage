@@ -35,20 +35,16 @@ export class Tab1Page {
   }
 
   onSavingToDo(){
-    // Nouvelle objet vide avec la classe Todo
+    // Nouvelle variable avec la classe Todo
     let todoAdd = new Todo();
-    // Vérification du contenu
-    console.log(todoAdd, "todo add")
-    // Affectation de la valeur dans le nouvel objet
+    //console.log(todoAdd, "todo add")
     todoAdd.titre = this.todo.titre;
-    // Enregistrement de l'objet dans le tableau
-    this.todoList.push(todoAdd);
-    // Vérification
+    this.todoList.push(this.todo);
     console.log(this.todoList);
   }
 
   onDeleteItem(item){
-    console.log(item, 'from ondeleteitem')
+    console.log(item, 'from ondelteitem')
     // Remove item from todoList;
     // Retrouver l'index de l'élément
     const index = this.todoList.indexOf(item);
